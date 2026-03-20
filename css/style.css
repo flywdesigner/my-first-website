@@ -1,19 +1,21 @@
 body {
     font-family: 'Cormorant Garamond', serif;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #333333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: #ffffff;
     padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #D4AF37;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
 }
 
 nav {
@@ -26,23 +28,35 @@ nav {
 }
 
 .logo a {
-    font-size: 24px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 28px;
     font-weight: 700;
     color: #D4AF37;
     text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.brand-font {
+    font-family: 'Tahoma', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #333333;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     transition: color 0.3s;
+    font-weight: 400;
 }
 
 nav ul li a:hover {
@@ -55,201 +69,248 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('../images/hero-bg.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .hero-content h1 {
-    font-size: 60px;
+    font-size: 54px;
     margin-bottom: 20px;
     color: #D4AF37;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
 }
 
 .hero-content p {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 40px;
-    color: #ffffff;
+    color: #666666;
+    letter-spacing: 1px;
 }
 
 .btn {
     background-color: #D4AF37;
-    color: #1a1a1a;
-    padding: 15px 30px;
+    color: #ffffff;
+    padding: 15px 40px;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
-    transition: transform 0.3s, background-color 0.3s;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
     display: inline-block;
+    border: 1px solid #D4AF37;
 }
 
 .btn:hover {
-    background-color: #e5c05b;
-    transform: translateY(-3px);
+    background-color: #ffffff;
+    color: #D4AF37;
+    transform: translateY(-2px);
 }
 
 .featured-products {
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
-    background-color: #1a1a1a;
+    background-color: #ffffff;
 }
 
 .featured-products h2 {
-    font-size: 48px;
-    margin-bottom: 50px;
-    color: #D4AF37;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #333333;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .product-item {
-    background-color: #1a1a1a;
-    padding: 30px;
+    background-color: #ffffff;
+    padding: 0;
     text-align: center;
-    border: 1px solid #333333;
-    transition: border-color 0.3s;
+    transition: all 0.4s ease;
 }
 
 .product-item:hover {
-    border-color: #D4AF37;
+    transform: translateY(-10px);
 }
 
 .product-item img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    background-color: #f9f9f9;
 }
 
 .product-item h3 {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #333333;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .product-item p {
-    font-size: 18px;
+    font-size: 16px;
     color: #D4AF37;
+    font-weight: 400;
 }
 
 .cta {
     padding: 100px 20px;
     text-align: center;
-    background-color: #1a1a1a;
-    border-top: 1px solid #D4AF37;
+    background-color: #fcfcfc;
+    border-top: 1px solid #f0f0f0;
 }
 
 .cta h2 {
-    font-size: 48px;
+    font-size: 32px;
     margin-bottom: 20px;
-    color: #D4AF37;
+    color: #333333;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .cta p {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 40px;
-    color: #ffffff;
+    color: #888888;
 }
 
 .cta form {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .cta input {
-    padding: 15px;
-    font-size: 18px;
+    padding: 15px 20px;
+    font-size: 14px;
     width: 300px;
-    border: 1px solid #D4AF37;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.cta input:focus {
+    border-color: #D4AF37;
 }
 
 .cta .btn {
-    border: 1px solid #D4AF37;
     cursor: pointer;
 }
 
 .product-gallery {
-    padding: 150px 20px 100px;
+    padding: 160px 20px 100px;
     text-align: center;
-    background-color: #1a1a1a;
+    background-color: #ffffff;
 }
 
 .product-gallery h2 {
-    font-size: 48px;
-    margin-bottom: 50px;
-    color: #D4AF37;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #333333;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .about-us {
-    padding: 150px 20px 100px;
+    padding: 160px 20px 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 80px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #1a1a1a;
+    background-color: #ffffff;
 }
 
 .about-content h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #D4AF37;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333333;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .about-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+    margin-bottom: 20px;
 }
 
 .about-image img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #D4AF37;
+    box-shadow: 20px 20px 0px #f9f9f9;
 }
 
 .contact {
-    padding: 150px 20px 100px;
+    padding: 160px 20px 100px;
     text-align: center;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
-    background-color: #1a1a1a;
+    background-color: #ffffff;
 }
 
 .contact-content h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #D4AF37;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333333;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .contact-content p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 40px;
-    color: #ffffff;
+    margin-bottom: 50px;
+    color: #666666;
 }
 
 .contact form {
     display: grid;
-    gap: 20px;
+    gap: 25px;
 }
 
 .contact input,
 .contact textarea {
-    padding: 15px;
-    font-size: 18px;
-    border: 1px solid #D4AF37;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    padding: 18px;
+    font-size: 14px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #D4AF37;
+}
+
+.contact textarea {
+    height: 150px;
+    resize: vertical;
 }
 
 .contact .btn {
@@ -258,12 +319,43 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #1a1a1a;
+    font-family: 'Tahoma', sans-serif;
+    background-color: #ffffff;
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0;
     position: relative;
-    bottom: 0;
     width: 100%;
-    border-top: 1px solid #D4AF37;
-    color: #ffffff;
+    border-top: 1px solid #f0f0f0;
+    color: #999999;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .about-us {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .cta input {
+        width: 100%;
+    }
 }
