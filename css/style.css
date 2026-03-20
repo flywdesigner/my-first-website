@@ -244,22 +244,22 @@ nav ul li a:hover {
 }
 
 .collection-banner img {
-    width: 100%;
+    width: calc(100% - 40px);
     height: 100%;
     object-fit: cover;
     display: block;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    position: absolute;
+    position: absolute; /* 所有图片绝对定位，重叠在一起 */
     top: 0;
     left: 20px;
-    right: 20px;
-    width: calc(100% - 40px);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    opacity: 0; /* 默认完全透明 */
+    transition: opacity 0.5s ease-in-out; /* 0.5秒淡入淡出效果 */
+    z-index: 1;
 }
 
 .collection-banner img.active {
-    opacity: 1;
+    opacity: 1; /* 只有带active类的图片可见 */
+    z-index: 2; /* 确保可见图片位于最上层 */
 }
 
 @media (max-width: 768px) {
