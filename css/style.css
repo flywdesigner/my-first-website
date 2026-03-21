@@ -234,49 +234,57 @@ nav ul li a:hover {
 .collection-banner {
     max-width: 1200px;
     margin: 0 auto 80px;
-    padding: 0 20px;
-    position: relative;
-    overflow: hidden;
 }
 
 .collection-banner.carousel {
-    height: 400px; /* Base height for desktop */
+    display: grid; /* 使用 Grid 堆叠图片 */
+    grid-template-columns: 1fr;
 }
 
 .collection-banner img {
-    width: calc(100% - 40px);
-    height: 100%;
-    object-fit: cover;
+    grid-area: 1 / 1 / 2 / 1; /* 所有图片占同一个网格单元 */
+    width: 100%;
+    height: auto; /* 自动高度，不裁切图片 */
+    object-fit: contain;
     display: block;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    position: absolute; /* 所有图片绝对定位，重叠在一起 */
-    top: 0;
-    left: 20px;
-    opacity: 0; /* 默认完全透明 */
-    transition: opacity 0.5s ease-in-out; /* 0.5秒淡入淡出效果 */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
     z-index: 1;
 }
 
 .collection-banner img.active {
-    opacity: 1; /* 只有带active类的图片可见 */
-    z-index: 2; /* 确保可见图片位于最上层 */
+    opacity: 1;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
-    .collection-banner.carousel {
-        height: 250px; /* Reduced height for mobile */
+    .collection-banner,
+    .video-banner {
+        margin-bottom: 40px;
     }
+}
+
+.video-banner {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+.video-banner video {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .brand-philosophy {
     max-width: 1200px;
     margin: 80px auto 0;
-    padding: 0 20px;
 }
 
 .brand-philosophy img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* 铺满 1200px 容器，与上方 Banner 对齐 */
+    height: auto; /* 按比例缩放 */
     display: block;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
